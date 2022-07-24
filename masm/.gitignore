@@ -1,4 +1,5 @@
+.idea
 .vs
+Debug
 x64
-masm.vcxproj.user
-
+*.vcxproj.user
