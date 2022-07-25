@@ -140,9 +140,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <MASM Include="masm.asm">
+    <MASM Include="src\1_Registers\registers.asm">
       <FileType>Text</FileType>
     </MASM>
+    <MASM Include="src\2_DataTypes\datatypes.asm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

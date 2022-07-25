@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="masm.asm">
+    <MASM Include="src\1_Registers\registers.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="src\2_DataTypes\datatypes.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
