@@ -1,18 +1,19 @@
 extern ExitProcess
 extern MessageBoxA
-extern Windows_User32_SysCall
+global Windows_x64_PrintDialog
 
 section .data
-    caption db '64-bit hello!', 0
-    message db 'Hello World!', 0
 
 section .text
-Windows_User32_SysCall:
-    sub    rsp,28h        ; shadow space, aligns stack
+Windows_x64_PrintDialog:
+    mov    r10, rcx       ; save first argument (char *) in r10 (title)
+    mov    r11, rdx       ; save second argument (char *) in r11 (body)
+    ;sub    rsp,28h        ; shadow space, aligns stack
     mov    rcx, 0         ; hWnd = HWND_DESKTOP
-    lea    rdx, [message] ; LPCSTR lpText
-    lea    r8,  [caption] ; LPCSTR lpCaption
+    lea    rdx, [r11]     ; LPCSTR lpText
+    lea    r8,  [r10]     ; LPCSTR lpCaption
     mov    r9d, 0         ; uType = MB_OK
     call   MessageBoxA    ; call MessageBox API function
-    mov    ecx, eax       ; uExitCode = MessageBox(...)
-    call ExitProcess
+    ;mov    ecx, eax       ; uExitCode = MessageBox(...)
+    ;call   ExitProcess
+    ret
