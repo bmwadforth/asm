@@ -7,6 +7,10 @@ section .data
 
 section .text
 Unconditional_Jumps:
+    ; function prologue
+    ;mov    rbp, rsp
+    sub    rsp, 28h        ; reserve 40 bytes of shadow space, aligns stack
+
     mov rcx, title
     mov rdx, body
     call Windows_x64_PrintDialog
@@ -15,4 +19,7 @@ Unconditional_Jumps:
 
 .JumpLabel:
     mov rax, 10         ; moving 10 into rax (return value) so Unconditional_Jumps() will return 10.
+
+    ; function epilogue
+    add    rsp, 28h       ; remove 40 bytes of shadow space, aligns stack
     ret
