@@ -1,11 +1,11 @@
 extern Windows_x64_PrintDialog
-global SumProcedure
+global x64_04_Procedures_Sum
 
 section .data
 
 ; int sum = SumProcedure(int a, int b, int c, int d, int e);
 section .text
-SumProcedure:
+x64_04_Procedures_Sum:
     mov     rax, 0
     add     rax, rcx            ; int a
     add     rax, rdx            ; int b

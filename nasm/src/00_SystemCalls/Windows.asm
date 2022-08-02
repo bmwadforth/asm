@@ -1,11 +1,11 @@
 extern ExitProcess
 extern MessageBoxA
-global Windows_x64_PrintDialog
+global x64_00_SystemCalls_Dialog
 
 section .data
 
 section .text
-Windows_x64_PrintDialog:
+x64_00_SystemCalls_Dialog:
     ; function prologue
     sub    rsp, 0x28       ; reserve 40 bytes of shadow space, aligns stack
 
