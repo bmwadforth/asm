@@ -7,5 +7,8 @@ file(GLOB SRC_FILES src/*.cpp src/**/*.cpp)
 file(GLOB SRC_FILES src/*.c src/**/*.c)
 file(GLOB SRC_FILES src/*.asm src/**/*.asm)
 
-SET(CMAKE_EXE_LINKER_FLAGS /LARGEADDRESSAWARE:NO)
+IF (WIN32)
+    SET(CMAKE_EXE_LINKER_FLAGS /LARGEADDRESSAWARE:NO)
+ENDIF()
+
 add_executable(untitled main.cpp ${SRC_FILES})
