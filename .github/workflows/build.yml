@@ -41,9 +41,7 @@ jobs:
 
   build-rust-arm64:
     name: Build Rust (ARM64)
-    # Use ubuntu-latest with arm64 architecture for the Rust build
-    runs-on: ubuntu-latest
-    architecture: arm64
+    runs-on: macos-latest
 
     steps:
       - name: Checkout Repository
