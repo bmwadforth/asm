@@ -12,7 +12,7 @@ env:
 jobs:
   build-cmake-x86_64:
     name: Build CMake (x86_64)
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Setup NASM
@@ -43,7 +43,6 @@ jobs:
           override: true
 
       - name: Build Rust Project
-        # Change working directory to src/arm64 before running cargo build
         run: |
           cd src/arm64
           cargo build --release
