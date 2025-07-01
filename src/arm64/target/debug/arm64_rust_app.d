@@ -1,0 +1,1 @@
+/Users/whiskey/projects/asm/src/arm64/target/debug/arm64_rust_app: /Users/whiskey/projects/asm/src/arm64/asm/functions.s /Users/whiskey/projects/asm/src/arm64/asm/print_string.s /Users/whiskey/projects/asm/src/arm64/build.rs /Users/whiskey/projects/asm/src/arm64/src/main.rs

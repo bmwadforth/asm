@@ -1,0 +1,10 @@
+[package]
+name = "arm64_rust_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# Required for the build.rs script to compile C/C++/Assembly files
+[build-dependencies]
+cc = "1.0"
